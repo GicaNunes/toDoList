@@ -1,0 +1,109 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    background-color: #ffe6f0;
+    color: #333;
+    margin: 0;
+    padding: 20px; /* Aumenta o espaço interno */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Centraliza no topo para evitar tarefas sobrepostas */
+    flex-direction: column;
+    min-height: 120vh; /* Aumenta o espaço vertical para evitar cortes */
+}
+
+.container {
+    max-width: 1800px; /* 3x maior que o original */
+    margin: 50px auto;
+    padding: 40px;
+    background: #fff0f5;
+    border-radius: 8px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os elementos se ajustem dentro do espaço */
+    justify-content: space-between; /* Alinha os campos e o botão */
+    gap: 15px;
+    width: 100%;
+}
+
+form input, form textarea {
+    font-family: 'Quicksand', sans-serif;
+    width: 75%; /* Mantém 75% do espaço para os campos */
+    max-width: 1000px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #d147a3;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    font-family: 'Quicksand', sans-serif;
+    width: auto; /* Botão se ajusta ao tamanho do texto */
+    background-color: #d147a3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 20px; /* Botão menor */
+    border: none;
+    border-radius: 4px;
+    align-self: flex-start; /* Garante que o botão fique na direita, mas na mesma linha */
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #b83b8f;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1800px;
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: #a3a3a3;
+}
+
+li.completed .done {
+    color: #d147a3;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    form {
+        flex-direction: column; /* Campos e botão empilhados em telas menores */
+    }
+
+    form input, form textarea, form button {
+        width: 100%; /* Campos ocupam toda a largura */
+    }
+
+    ul {
+        width: 100%;
+    }
+}
